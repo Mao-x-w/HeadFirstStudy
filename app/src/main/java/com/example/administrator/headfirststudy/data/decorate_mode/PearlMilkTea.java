@@ -5,17 +5,17 @@ import com.example.administrator.headfirststudy.data.decorate_mode.base.Beverage
 /**
  * User: laomao
  * Date: 2017-04-28
- * Time: 10-49
+ * Time: 10-46
  */
 
-public class HouseBlend extends Beverage {
+public class PearlMilkTea extends Beverage {
 
-    public HouseBlend() {
-        setDesc("HouseBlend");
+    public PearlMilkTea() {
+        setDesc("PearlMilkTea");
     }
 
     @Override
     public Double cost() {
-        return 3.00;
+        return 2.00;
     }
 }

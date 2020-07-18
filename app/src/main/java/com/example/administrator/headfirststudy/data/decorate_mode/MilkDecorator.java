@@ -10,17 +10,17 @@ import com.example.administrator.headfirststudy.data.decorate_mode.base.Condimen
  * Time: 10-50
  */
 
-public class MochaDecorator extends CondimentDecorator {
+public class MilkDecorator extends CondimentDecorator {
 
     private Beverage mBeverage;
 
-    public MochaDecorator(Beverage beverage) {
+    public MilkDecorator(Beverage beverage) {
         mBeverage = beverage;
     }
 
     @Override
     public String getDesc() {
-        return mBeverage.getDesc()+"*Mocha";
+        return mBeverage.getDesc()+"*Milk";
     }
 
     /**

@@ -11,9 +11,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.administrator.headfirststudy.R;
-import com.example.administrator.headfirststudy.data.decorate_mode.Espresso;
-import com.example.administrator.headfirststudy.data.decorate_mode.HouseBlend;
-import com.example.administrator.headfirststudy.data.decorate_mode.MochaDecorator;
+import com.example.administrator.headfirststudy.data.decorate_mode.MongoMilkTea;
+import com.example.administrator.headfirststudy.data.decorate_mode.PearlMilkTea;
+import com.example.administrator.headfirststudy.data.decorate_mode.MilkDecorator;
 import com.example.administrator.headfirststudy.data.decorate_mode.SugarDecorator;
 import com.example.administrator.headfirststudy.data.decorate_mode.base.Beverage;
 import com.example.administrator.headfirststudy.tools.ToastUtils;
@@ -34,7 +34,7 @@ public class DecorateModeActivity extends AppCompatActivity{
     protected Button mBtnPay;
     protected TextView mTvResult;
 
-    private Beverage beverage; // 咖啡
+    private Beverage beverage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,16 +60,16 @@ public class DecorateModeActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 if (mRgCoffee.getCheckedRadioButtonId()==R.id.rb_espresso){
-                    beverage=new Espresso();
+                    beverage=new PearlMilkTea();
                 }else if (mRgCoffee.getCheckedRadioButtonId()==R.id.rb_houseblend){
-                    beverage=new HouseBlend();
+                    beverage=new MongoMilkTea();
                 }else {
                     ToastUtils.showShortToast("请选择要购买的咖啡");
                     return;
                 }
 
                 if (mCbMocha.isChecked()){
-                    beverage=new MochaDecorator(beverage);
+                    beverage=new MilkDecorator(beverage);
                 }
 
                 if (mCbSugar.isChecked()){
